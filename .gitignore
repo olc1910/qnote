@@ -10,7 +10,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-cpython3_3.13_qnote/
+.pybuild/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
