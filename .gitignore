@@ -10,9 +10,15 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+cpython3_3.13_qnote/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Virtual environments
+*venv*/
+*.venv*/
+cpython3_*/
 
 # Distribution / packaging
 dist/
