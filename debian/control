@@ -1,0 +1,39 @@
+Source: qnote
+Section: utils
+Priority: optional
+Maintainer: Otis L. Crossley <qnote@olcrossley.uk>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+               python3-pip
+Standards-Version: 4.6.0
+Homepage: https://github.com/olc1910/qnote
+Vcs-Browser: https://github.com/olc1910/qnote
+Vcs-Git: https://github.com/olc1910/qnote.git
+Rules-Requires-Root: no
+
+Package: qnote
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends},
+         python3-click (>= 8.0.0),
+         python3-rich (>= 13.0.0),
+         python3-pygments (>= 2.14.0),
+         python3-yaml (>= 6.0)
+Description: Quick Note & Snippet Manager - CLI tool
+ qnote is a minimalistic CLI tool for managing notes, code snippets,
+ and TODO items directly from your terminal.
+ .
+ Features:
+  - Create and manage notes with Markdown support
+  - Store code snippets with syntax highlighting
+  - Track TODO items with priorities and due dates
+  - Organize everything with a flexible tagging system
+  - Fast full-text search across all content
+  - External editor integration (vim, nano, vscode)
+  - Beautiful terminal UI with Rich
+  - SQLite database for reliable local storage
+ .
+ Perfect for developers who live in the terminal and need quick access
+ to notes, code snippets, and tasks without leaving the command line.

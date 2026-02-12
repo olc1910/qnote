@@ -1,0 +1,17 @@
+qnote (0.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #XXXXXX)
+  * Features:
+    - Note management with Markdown support
+    - Code snippet storage with syntax highlighting
+    - TODO tracking with priorities and due dates
+    - Tag-based organization system
+    - Full-text search functionality
+    - External editor integration
+    - Rich terminal UI
+    - SQLite database backend
+    - Shell completion (bash, zsh, fish) - auto-installed
+    - Configuration management (qnote config commands)
+    - Comprehensive documentation
+
+ -- Otis L. Crossley <qnote@olcrossley.uk>  Tue, 10 Feb 2026 12:00:00 +0100

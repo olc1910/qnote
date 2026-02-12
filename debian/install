@@ -1,0 +1,11 @@
+# Documentation files
+README.md usr/share/doc/qnote/
+CONTRIBUTING.md usr/share/doc/qnote/
+CHANGELOG.md usr/share/doc/qnote/
+docs/* usr/share/doc/qnote/docs/
+
+# Shell completion files
+completion/qnote.bash-completion etc/bash_completion.d/qnote
+completion/qnote.zsh-completion usr/share/zsh/vendor-completions/_qnote
+completion/qnote.fish usr/share/fish/vendor_completions.d/qnote.fish
+

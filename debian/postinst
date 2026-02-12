@@ -1,0 +1,40 @@
+#!/bin/sh
+# postinst script for qnote
+
+set -e
+
+case "$1" in
+    configure)
+        # Nothing special needed - completion files are installed by debian/install
+        # They will be auto-loaded by the respective shells
+        
+        echo "qnote installed successfully!"
+        echo ""
+        echo "Shell completion is now available for bash, zsh, and fish."
+        echo "Restart your shell or run one of:"
+        echo "  - bash: exec bash"
+        echo "  - zsh:  exec zsh"
+        echo "  - fish: exec fish"
+        echo ""
+        echo "Get started:"
+        echo "  qnote add \"My first note\""
+        echo "  qnote --help"
+        echo ""
+        echo "Configuration:"
+        echo "  qnote config list"
+        echo ""
+        echo "Documentation: /usr/share/doc/qnote/"
+        ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

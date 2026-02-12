@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Debian packaging
+debian/*.debhelper
+debian/*.substvars
+debian/files
+debian/debhelper-build-stamp
+debian/.debhelper/
+debian/qnote/
+*.deb
+*.dsc
+*.changes
+*.buildinfo
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific
+test-config.sh.local
+*.backup
+*.bak

@@ -1,0 +1,85 @@
+# MIT License
+# Copyright (c) 2026 Otis L. Crossley
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qnote"
+version = "0.1.0"
+description = "A minimalistic CLI tool for managing notes, code snippets, and TODOs"
+readme = "README.md"
+authors = [
+    {name = "Otis L. Crossley", email = "qnote@olcrossley.uk"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+keywords = ["cli", "notes", "snippets", "todo", "productivity"]
+requires-python = ">=3.8"
+
+dependencies = [
+    "click>=8.0.0",
+    "rich>=13.0.0",
+    "pygments>=2.14.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "types-PyYAML",
+]
+sync = [
+    "gitpython>=3.1.0",
+]
+clipboard = [
+    "pyperclip>=1.8.0",
+]
+
+[project.scripts]
+qnote = "qnote.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/olc1910/qnote"
+Documentation = "https://github.com/olc1910/qnote/blob/main/docs"
+Repository = "https://github.com/olc1910/qnote"
+"Bug Tracker" = "https://github.com/olc1910/qnote/issues"
+
+[tool.setuptools]
+packages = ["qnote", "qnote.core", "qnote.commands", "qnote.utils", "qnote.sync"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=qnote --cov-report=html --cov-report=term-missing"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

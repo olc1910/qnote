@@ -1,0 +1,8 @@
+# Core dependencies
+click>=8.0.0
+rich>=13.0.0
+pygments>=2.14.0
+pyyaml>=6.0
+
+# Optional dependencies
+# Install with: pip install -r requirements-dev.txt
